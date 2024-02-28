@@ -53,8 +53,9 @@ try:
     PORT = int(os.environ.get('PORT', 5000))
 
     # ngrok auth-token
-    ngrok.set_auth_token(ngrok_auth_token)
-    public_url = ngrok.connect(fport).public_url
+    # ngrok.set_auth_token(ngrok_auth_token)
+    # public_url = ngrok.connect(fport).public_url
+    public_url = input("public ngrok url: ")
     final_ngrok = public_url[:4] + "s" + public_url[4:]
 
     # url shorten or not
